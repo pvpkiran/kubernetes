@@ -1,0 +1,6 @@
+apiVersion: apps/v1 #<This is not optional>
+kind: Deployment
+metadata:
+  name: dockerjib-deployment
+spec:
+  replicas: 2

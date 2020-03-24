@@ -1,0 +1,19 @@
+apiVersion: apps/v1 #<This is not optional>
+kind: Deployment
+metadata:
+  name: dockerjib-deployment
+spec:
+  template:
+      spec:
+        volumes:
+          - name: config
+            configMap:
+              name: dockerjib-config
+        containers:
+          - name: testingjib
+            args:
+              - --spring.config.location=/tmp/application.properties
+            volumeMounts:
+              - mountPath: /tmp
+                name: config
+

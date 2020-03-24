@@ -20,7 +20,7 @@ kubectl apply -f k8s
 
 kubectl port-forward serivce/demo-app 8090:8090
 
-skaffold dev 
+skaffold dev (or use Intellij Cloud Code plugin)
 
-kustomize build ---> to see the comined yaml output
-kubectl apply -k . (run from kustomize/base directory)```
+kustomize build // to see the combined yaml output
+kubectl apply -k . (run from kustomize/base or kustomize/qa directory)```
